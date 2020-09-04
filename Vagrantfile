@@ -70,7 +70,7 @@ Vagrant.configure("2") do |config|
     webserver.vm.network "private_network", ip: "192.168.2.11"
 
     # Mystery line we have to include when working in the lab
-    webserver.vm.synced_folder ".", "/vagrant", owner: "vagrant", group: "vagrant", mount_options:["dmode=775,fmode=777"]
+    webserver.vm.synced_folder "./webserver", "/vagrant", owner: "vagrant", group: "vagrant", mount_options:["dmode=775,fmode=777"]
 
     # Runs a script when the webserver is created.
     webserver.vm.provision "shell", path: "webserver/webserver.sh"
