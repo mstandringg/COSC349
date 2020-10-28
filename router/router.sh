@@ -1,4 +1,0 @@
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew cask install java
-
-javac /vagrant/router/BusRoutes.java
